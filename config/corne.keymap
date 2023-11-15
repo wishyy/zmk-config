@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LSHIFT_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
 
@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp ESC>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
         };
 
         td_lgui_l3: td_lgui_l3 {
@@ -33,7 +33,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&mo 3>;
 
-            tapping-term-ms = <280>;
+            tapping-term-ms = <250>;
         };
     };
 
