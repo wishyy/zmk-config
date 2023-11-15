@@ -27,11 +27,11 @@
             tapping-term-ms = <250>;
         };
 
-        td_lgui_l4: td_lgui_l4 {
+        td_l2_l4: td_l2_l4 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_LGUI_L4";
+            label = "TD_L2_L4";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&kp LEFT_ALT>;
+            bindings = <&mo 2>, <&mo 4>;
 
             tapping-term-ms = <200>;
         };
@@ -303,10 +303,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td_lctrl_esc    &kp A  &kp S  &kp D        &kp F      &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td_lshift_caps  &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                               &td_lgui_l4  &td_l1_l3  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                               &kp LGUI  &td_l1_l3  &kp SPACE    &kp RET  &td_l2_l4  &kp RALT
             >;
         };
 
