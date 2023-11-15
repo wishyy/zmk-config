@@ -43,11 +43,179 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp LEFT>,
+                <&kp N1>,
                 <&macro_release>,
                 <&kp LGUI>;
 
             label = "MACRO_CMD_1";
+        };
+
+        macro_cmd_2: macro_cmd_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N2>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_2";
+        };
+
+        macro_cmd_3: macro_cmd_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_3";
+        };
+
+        macro_cmd_4: macro_cmd_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_4";
+        };
+
+        macro_cmd_5: macro_cmd_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_5";
+        };
+
+        macro_cmd_6: macro_cmd_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_6";
+        };
+
+        macro_cmd_7: macro_cmd_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_7";
+        };
+
+        macro_cmd_8: macro_cmd_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N8>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_8";
+        };
+
+        macro_cmd_9: macro_cmd_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp N9>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_9";
+        };
+
+        macro_cmd_left: macro_cmd_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_LEFT";
+        };
+
+        macro_cmd_right: macro_cmd_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_RIGHT";
+        };
+
+        macro_cmd_up: macro_cmd_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp UP>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_UP";
+        };
+
+        macro_cmd_down: macro_cmd_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_DOWN";
         };
     };
 
@@ -101,10 +269,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
-&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &macro_cmd_1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &macro_cmd_7  &macro_cmd_8  &macro_cmd_9  &trans    &trans  &trans           &macro_cmd_up    &trans            &trans  &kp BACKSPACE
+&trans  &trans  &macro_cmd_4  &macro_cmd_5  &macro_cmd_6  &trans    &trans  &macro_cmd_left  &macro_cmd_down  &macro_cmd_right  &trans  &trans
+&trans  &trans  &macro_cmd_1  &macro_cmd_2  &macro_cmd_3  &trans    &trans  &trans           &trans           &trans            &trans  &trans
+                              &trans        &trans        &trans    &trans  &trans           &trans
             >;
         };
     };
