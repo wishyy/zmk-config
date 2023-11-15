@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LSHIFT_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <280>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
 
@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 3>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
         };
 
         td_l2_l4: td_l2_l4 {
@@ -33,14 +33,14 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 4>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
         };
 
         td_lctrl_esc: td_lctrl_esc {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LCTRL_ESC";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
             bindings = <&kp LCTRL>, <&kp ESC>;
         };
     };
