@@ -290,7 +290,7 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
             layers = <0>;
-            timeout-ms = <130>;
+            timeout-ms = <160>;
         };
     };
 
