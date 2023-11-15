@@ -27,15 +27,6 @@
             tapping-term-ms = <280>;
         };
 
-        td_l2_l4: td_l2_l4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_L2_L4";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 4>;
-
-            tapping-term-ms = <280>;
-        };
-
         td_lctrl_esc: td_lctrl_esc {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LCTRL_ESC";
@@ -303,10 +294,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                               &kp LGUI  &td_l1_l3  &kp SPACE    &kp RET  &td_l2_l4  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                               &kp LGUI  &td_l1_l3  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -346,15 +337,6 @@
 &trans     &trans  &macro_cmd_4  &macro_cmd_5  &macro_cmd_6  &trans       &trans      &macro_cmd_left  &macro_cmd_down  &macro_cmd_right  &trans  &trans
 &kp LSHFT  &trans  &macro_cmd_1  &macro_cmd_2  &macro_cmd_3  &trans       &bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2      &trans  &trans
                                  &trans        &trans        &kp SPACE    &kp ENTER   &trans           &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans       &trans     &trans           &macro_opt_up    &trans            &trans  &kp DELETE
-&trans     &trans  &trans  &trans  &trans  &trans       &trans     &macro_opt_left  &macro_opt_down  &macro_opt_right  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans       &trans     &trans           &trans           &trans            &trans  &trans
-                           &trans  &trans  &kp SPACE    &kp ENTER  &trans           &trans
             >;
         };
     };
