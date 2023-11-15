@@ -26,6 +26,29 @@
 
             tapping-term-ms = <200>;
         };
+
+        td_lgui_l3: td_lgui_l3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LGUI_L3";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI>, <&mo 3>;
+        };
+    };
+
+    macros {
+        macro_cmd_1: macro_cmd_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "MACRO_CMD_1";
+        };
     };
 
     keymap {
@@ -39,10 +62,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
-                               &kp LGUI  &sl 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E        &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td_lctrl_esc    &kp A  &kp S  &kp D        &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td_lshift_caps  &kp Z  &kp X  &kp C        &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
+                               &td_lgui_l3  &sl 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -78,10 +101,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &macro_cmd_1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
