@@ -269,10 +269,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &macro_cmd_7  &macro_cmd_8  &macro_cmd_9  &trans    &trans  &trans           &macro_cmd_up    &trans            &trans  &kp BACKSPACE
-&trans  &trans  &macro_cmd_4  &macro_cmd_5  &macro_cmd_6  &trans    &trans  &macro_cmd_left  &macro_cmd_down  &macro_cmd_right  &trans  &trans
-&trans  &trans  &macro_cmd_1  &macro_cmd_2  &macro_cmd_3  &trans    &trans  &trans           &trans           &trans            &trans  &trans
-                              &trans        &trans        &trans    &trans  &trans           &trans
+&trans     &trans  &macro_cmd_7  &macro_cmd_8  &macro_cmd_9  &trans    &trans  &trans           &macro_cmd_up    &trans            &trans  &kp BACKSPACE
+&trans     &trans  &macro_cmd_4  &macro_cmd_5  &macro_cmd_6  &trans    &trans  &macro_cmd_left  &macro_cmd_down  &macro_cmd_right  &trans  &trans
+&kp LSHFT  &trans  &macro_cmd_1  &macro_cmd_2  &macro_cmd_3  &trans    &trans  &trans           &trans           &trans            &trans  &trans
+                                 &trans        &trans        &trans    &trans  &trans           &trans
             >;
         };
     };
