@@ -10,12 +10,21 @@
 
 / {
     behaviors {
-        td_shift_caps: td_shift_caps {
+        td_lshift_caps: td_lshift_caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_CAPS";
+            label = "TD_LSHIFT_CAPS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+        };
+
+        td_lctrl_esc: td_lctrl_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LCTRL_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp ESC>;
+
+            tapping-term-ms = <200>;
         };
     };
 
@@ -30,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL       &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td_shift_caps  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                              &kp LGUI  &sl 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
+                               &kp LGUI  &sl 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -69,7 +78,7 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
