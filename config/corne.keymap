@@ -22,7 +22,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_L1_L3";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 3>;
+            bindings = <&mo 1>, <&mo 4>;
 
             tapping-term-ms = <280>;
         };
@@ -305,10 +305,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                               &kp LGUI  &td_l1_l3  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td_lctrl_esc    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td_lshift_caps  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                               &kp LGUI  &mo 3  &kp SPACE    &kp RET  &mo 1  &mo 2
             >;
         };
 
