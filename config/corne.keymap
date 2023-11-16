@@ -320,10 +320,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp LG(KP_MULTIPLY)  &kp N7  &kp N8    &kp N9    &kp PLUS     &trans   &trans    &kp UP    &trans     &trans  &kp BSPC
-&trans     &kp KP_DIVIDE        &kp N4  &kp N5    &kp N6    &kp MINUS    &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&kp LSHFT  &kp N0               &kp N1  &kp N2    &kp N3    &kp DOT      &trans   &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI  &kp LALT  &kp SPACE    &kp RET  &trans    &kp RALT
+&kp TAB    &kp LG(KP_MULTIPLY)  &kp N7  &kp N8    &kp N9    &kp PLUS     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp UP    &trans     &trans  &kp BSPC
+&trans     &kp KP_DIVIDE        &kp N4  &kp N5    &kp N6    &kp MINUS    &trans             &kp LEFT         &kp DOWN  &kp RIGHT  &trans  &trans
+&kp LSHFT  &kp N0               &kp N1  &kp N2    &kp N3    &kp DOT      &trans             &trans           &trans    &trans     &trans  &trans
+                                        &kp LGUI  &kp LALT  &kp SPACE    &kp RET            &trans           &kp RALT
             >;
         };
 
