@@ -288,8 +288,8 @@
 
         qw_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-            layers = <2>;
+            key-positions = <2 1>;
+            layers = <0>;
             timeout-ms = <160>;
         };
     };
