@@ -337,7 +337,7 @@
             bindings = <
 &kp GRAVE  &kp EXCL  &kp AT   &kp MINUS       &kp PLUS   &kp PAGE_UP      &kp K_PLAY_PAUSE  &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PIPE  &kp BSPC
 &trans     &kp HOME  &kp END  &kp UNDERSCORE  &kp EQUAL  &kp PAGE_DOWN    &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW       &kp RIGHT_ARROW  &kp BSLH  &trans
-&trans     &trans    &trans   &trans          &trans     &trans           &kp K_PLAY_PAUSE  &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11   &kp F12
+&trans     &trans    &trans   &trans          &trans     &bt BT_CLR       &kp K_PLAY_PAUSE  &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F11   &kp F12
                               &trans          &trans     &kp SPACE        &kp RET           &trans          &kp RALT
             >;
         };
