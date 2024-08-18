@@ -22,7 +22,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_L1_L3";
             #binding-cells = <0>;
-            bindings = <&mo 0>, <&mo 2>;
+            bindings = <&mo 1>, <&mo 2>;
 
             tapping-term-ms = <280>;
         };
@@ -297,6 +297,21 @@
     keymap {
         compatible = "zmk,keymap";
 
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
+            bindings = <
+&kp TAB          &kp Q  &kp W  &kp E         &kp R      &kp T        &kp Y            &kp U      &kp I            &kp O    &kp P     &kp DEL
+&td_lshift_caps  &kp A  &kp S  &kp D         &kp F      &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SQT
+&kp LCTRL        &kp Z  &kp X  &kp C         &kp V      &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &kp ESCAPE
+                               &kp LEFT_ALT  &kp ENTER  &lt 1 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
+            >;
+        };
+
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -309,21 +324,6 @@
 &trans     &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5      &kp NUMBER_6     &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &trans
 &trans     &trans           &kp TILDE     &kp GRAVE     &kp LEFT_BRACKET  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &trans        &trans                &trans                 &trans
                                           &kp LEFT_ALT  &trans            &trans            &trans           &trans             &kp RALT
-            >;
-        };
-
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            bindings = <
-&kp TAB          &kp Q  &kp W  &kp E         &kp R      &kp T        &kp Y            &kp U      &kp I            &kp O    &kp P     &kp DEL
-&td_lshift_caps  &kp A  &kp S  &kp D         &kp F      &kp G        &kp H            &kp J      &kp K            &kp L    &kp SEMI  &kp SQT
-&kp LCTRL        &kp Z  &kp X  &kp C         &kp V      &kp B        &kp N            &kp M      &kp COMMA        &kp DOT  &kp FSLH  &kp ESCAPE
-                               &kp LEFT_ALT  &kp ENTER  &lt 0 TAB    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_SHIFT
             >;
         };
 
@@ -356,7 +356,7 @@
         compatible = "zmk,conditional-layers";
 
         l3 {
-            if-layers = <0 2>;
+            if-layers = <1 2>;
             then-layer = <3>;
         };
     };
