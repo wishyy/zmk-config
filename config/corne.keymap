@@ -306,8 +306,8 @@
 
             bindings = <
 &kp TAB          &kp Q  &kp W  &kp E  &kp R     &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&td_lctrl_esc    &kp A  &kp S  &kp D  &kp F     &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&td_lshift_caps  &kp Z  &kp X  &kp C  &kp V     &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESCAPE
+&td_lshift_caps  &kp A  &kp S  &kp D  &kp F     &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL        &kp Z  &kp X  &kp C  &kp V     &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESCAPE
                                &mo 2  &kp LGUI  &kp SPACE    &kp RET  &mo 1  &kp RIGHT_ALT
             >;
         };
